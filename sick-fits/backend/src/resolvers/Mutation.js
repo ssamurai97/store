@@ -6,14 +6,14 @@ const Mutations = {
             ...args
 
         }
-    }, info)
+    }, info);
 
     console.log(item)
     return item;
     } ,
      updateItem(parent, args, ctx, info){
         //first take the a copy of the updates
-        const updates = {...args};
+        const updates = { ...args };
         //remve Id from updates
         delete updates.id;
         // run the update method
@@ -21,11 +21,11 @@ const Mutations = {
             {
                 data:updates,
                 where:{
-                    id:args.id,
-                }
+                    id: args.id,
+                },
             },
             info
         );
    },
-}
+};
 module.exports = Mutations;
