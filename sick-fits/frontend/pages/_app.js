@@ -7,11 +7,11 @@ class MyApp extends App {
      static async getInitalProps({Component,ctx}){
         let pageProps = {};
         if(Component.getInitalProps){
-            pageProps = await Component.getInitalProps(ctx);
+            pageProps = await Component.getInitialProps(ctx);
         }
         //this expose the query to the user
-        pageProps.qury = ctx.qury;
-        return {pageProps };
+        pageProps.query = ctx.query;
+        return { pageProps };
     }
     render(){
         const {Component,apollo, pageProps } = this.props;

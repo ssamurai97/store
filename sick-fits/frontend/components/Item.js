@@ -32,8 +32,8 @@ import formatMoney from '../lib/formatMoney';
                 <div className="buttonList">
                     <Link href={{
                         pathname:"update",
-                        query:{id:item.id}
-                    }}><a>Edit </a></Link>
+                        query:{id: item.id},
+                    }}><a>Edit ✏️</a></Link>
                     <button>Add To Cart </button>
                     <button>Delete</button>
                 </div>
